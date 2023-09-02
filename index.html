@@ -15,12 +15,12 @@
         <h2 id="app">liamgen.js</h2>
         <ul class="menu">
             <li>
-                <a href="#">
+                <a href="#about">
                     A propos
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#projets">
                     Projets
                 </a>
             </li>
@@ -46,45 +46,24 @@
         <div>
             <h2>Mes <span class="me">projets</span></h2>
             <div id="projets">
-                <div>
+                <div href="blank|https://levendelaiscinema.fr/">
                     <img src="cdn/img/projet-1.png" alt="">
                     <h3>Cinéma Le Vendelais</h3>
                     <p>Site web du cinéma de Châtillon en vendelais</p>
                 </div>
-                <div>
-                    <img src="cdn/img/projet-1.png" alt="">
+                <div href="blank|https://github.com/liam-gen/better-websites">
+                    <img src="cdn/img/projet-2.png" alt="">
                     <h3>Better Websites</h3>
-                    <p>Site web du cinéma de Châtillon en vendelais</p>
+                    <p>Une extension pour améliorer l'affichage de certains sites</p>
                 </div>
             </div>
         </div>
         
     </main>
-        <script>
-
-            var app = document.getElementById('typewriter');
-
-            var typewriter = new Typewriter(app, {
-                loop: true
-            });
-
-            typewriter.typeString('Développeur web')
-                .pauseFor(2500)
-                .deleteChars(3)
-                //.deleteAll()
-                .typeString("d'applications")
-                .pauseFor(2500)
-                .deleteChars(14)
-                .typeString('back-end')
-                .pauseFor(2500)
-                .deleteChars(9)
-                .typeString("")
-                .pauseFor(2500)
-                .deleteAll()
-                .start();
-        </script>
     <footer>
 
     </footer>
+
+    <script src="cdn/js/script.js"></script>
 </body>
 </html>
