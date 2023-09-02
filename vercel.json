@@ -1,8 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/blog",
-        "destination": "https://acme.com/blog"
+        "source": "/test",
+        "destination": "https://google.com"
       }
     ]
   }
