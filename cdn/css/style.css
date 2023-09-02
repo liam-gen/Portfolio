@@ -28,7 +28,7 @@ body{
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4{
+h1, h2{
     font-family: var(--title-font);
 }
 
@@ -93,6 +93,14 @@ span.me{
 
 #projets div img{
     height: 100px;
+}
+
+#contact ul{
+    list-style: none;
+}
+
+#contact a{
+    color:whitesmoke
 }
 
 @media screen and (max-width: 780px) {
