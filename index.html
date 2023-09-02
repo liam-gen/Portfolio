@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liamgen.js</title>
+    <link rel="stylesheet" href="cdn/css/style.css">
+    <link rel="shortcut icon" href="cdn/img/logo.png" type="image/x-icon">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.20.1/core.min.js" integrity="sha512-VhCNuqzYKIhOU4i+EWPomIQu3AJ8Q2HmuemubIOUHd6m6ohnHynRxBp8Jl/f8xmVEPiKtpKWuacuBeh49SBfCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <h2 id="app">liamgen.js</h2>
+        <ul class="menu">
+            <li>
+                <a href="#">
+                    A propos
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Projets
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Commander
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div id="about">
+            <h2><span class="me" id="typewriter"></span></h2>
+            <p>
+                Hey, moi c'est <span class="me">liamgen.js</span> ! Je suis depuis développeur 3 ans.
+            </p>
+            <p>
+                Je développe tout types de choses comme des <b><u>sites web</u></b>, des <b><u>applications pour Windows</u></b> et bientôt des <b><u>applications mobiles</u></b>
+            </p>
+        </div>
+
+        <div>
+            <h2>Mes <span class="me">projets</span></h2>
+            <div id="projets">
+                <div>
+                    <img src="cdn/img/projet-1.png" alt="">
+                    <h3>Cinéma Le Vendelais</h3>
+                    <p>Site web du cinéma de Châtillon en vendelais</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+        <script>
+
+            var app = document.getElementById('typewriter');
+
+            var typewriter = new Typewriter(app, {
+                loop: true
+            });
+
+            typewriter.typeString('Développeur web')
+                .pauseFor(2500)
+                .deleteChars(3)
+                //.deleteAll()
+                .typeString("d'applications")
+                .pauseFor(2500)
+                .deleteChars(14)
+                .typeString('back-end')
+                .pauseFor(2500)
+                .deleteChars(9)
+                .typeString("")
+                .pauseFor(2500)
+                .deleteAll()
+                .start();
+        </script>
+    <footer>
+
+    </footer>
+</body>
+</html>
