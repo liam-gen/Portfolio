@@ -28,7 +28,7 @@ body{
     scroll-behavior: smooth;
 }
 
-h1, h2{
+h1, h2, h3{
     font-family: var(--title-font);
 }
 
@@ -66,13 +66,13 @@ span.me{
     font-family: var(--title-font);
 }
 
-#projets{
+.elements{
     display: flex;
     flex-wrap: wrap;
     gap: 20px
 }
 
-#projets div{
+.elements div{
     background: white;
     border-radius: 1.2rem;
     color: black;
@@ -87,11 +87,11 @@ span.me{
     text-align:center;
 }
 
-#projets div:hover{
+.elements div:hover{
     padding: 10px;
 }
 
-#projets div img{
+.elements div img{
     height: 100px;
 }
 
@@ -101,6 +101,14 @@ span.me{
 
 #contact a{
     color:whitesmoke
+}
+
+footer{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 @media screen and (max-width: 780px) {
@@ -117,4 +125,20 @@ span.me{
         align-items: center;
         justify-content: center;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #111;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #222;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
 }
