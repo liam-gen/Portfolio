@@ -118,6 +118,7 @@ footer{
 @media screen and (max-width: 780px) {
     header{
         flex-direction: column;
+        position: unset !important;
     }
 
     header ul{
