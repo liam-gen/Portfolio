@@ -99,14 +99,6 @@ span.me{
     height: 100px;
 }
 
-#contact ul{
-    list-style: none;
-}
-
-#contact a{
-    color:whitesmoke
-}
-
 footer{
     display: flex;
     padding: 10px;
