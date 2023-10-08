@@ -5,7 +5,7 @@
     font-family: 'Azonix Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Azonix Regular'), url('cdn/fonts/Azonix.woff') format('woff');
+    src: local('Azonix Regular'), url('../../cdn/fonts/Azonix.woff') format('woff');
 }
 
 /* DEFAULT */
