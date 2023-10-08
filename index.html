@@ -3,110 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>liamgen.js</title>
-    <link rel="stylesheet" href="cdn/css/style.css">
     <link rel="stylesheet" href="cdn/css/main.css">
+    <link rel="stylesheet" href="cdn/css/style.css">
+
+    <title>liamgen.js</title>
     <link rel="shortcut icon" href="cdn/img/logo.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.20.1/core.min.js" integrity="sha512-VhCNuqzYKIhOU4i+EWPomIQu3AJ8Q2HmuemubIOUHd6m6ohnHynRxBp8Jl/f8xmVEPiKtpKWuacuBeh49SBfCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+
     <div class="loader">
         <img src="cdn/img/logo.png" alt="">
     </div>
 
-    <div class="container">
-        <header>
-            <h2 id="app">liamgen.js</h2>
-            <ul class="menu">
-                <li>
-                    <a href="#">
-                        A propos
-                    </a>
-                </li>
-                <li>
-                    <a href="#projets">
-                        Projets
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact">
-                        Contacter
-                    </a>
-                </li>
+    <div class="content">
+        <div class="mobile-menu">
+            <i class="fa-solid fa-close close-menu fa-2xl"></i>
+            <ul>
+                <li href="#about">A propos</li>
+                <li href="#services">Mes services</li>
+                <li href="#projects">Mes projets</li>
+                <li href="#contact">Me contacter</li>
             </ul>
-        </header>
-    
+        </div>
         <main>
-            <div id="about">
-                <h2><span class="me" id="typewriter"></span></h2>
-                <p>
-                    Hey, moi c'est <span class="me">liamgen.js</span> ! Je suis développeur depuis <b>3</b> ans.
-                </p>
-                <p>
-                    Je développe tout types de choses comme des <b><u>sites web</u></b>, des <b><u>applications pour Windows</u></b> et bientôt des <b><u>applications mobiles</u></b>
-                </p>
-            </div>
-    
-            <div id="services">
-                <h2>Mes <span class="me">services</span></h2>
-                <div class="elements">
-                    <div>
-                        <h3>SIte WEB</h3>
-                        <p>Je vais développer votre <b>site web</b> sauf site avec payements.</p>
-                    </div>
-                    <div>
-                        <h3>Extension</h3>
-                        <p>Je vais développer une <b>extension</b> pour n'importe quel navigateur.</p>
-                    </div>
-                    <div>
-                        <h3>Application Windows</h3>
-                        <p>Je vais développer une <b>application</b> pour Windows pour <b>vous</b>.</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="projets">
-                <h2>Mes <span class="me">projets</span></h2>
-                <div class="elements">
-                    <div href="blank|https://levendelaiscinema.fr/">
-                        <img src="cdn/img/projet-1.png" alt="">
-                        <h3>Cinéma Le Vendelais</h3>
-                        <p>Site web du cinéma de Châtillon en vendelais</p>
-                    </div>
-                    <div href="blank|https://github.com/liam-gen/better-websites">
-                        <img src="cdn/img/projet-2.png" alt="">
-                        <h3>Better Websites</h3>
-                        <p>Une extension pour améliorer l'affichage de certains sites</p>
-                    </div>
-                    <div href="blank|https://lgjs-apis.vercel.app">
-                        <img src="cdn/img/projet-2.png" alt="">
-                        <h3>LGJS APIs</h3>
-                        <p>APIs utiles et gratuites</p>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="contact">
-                <h2>Me <span class="me">contacter</span></h2>
-                <h4>
-                    <ul>
-                        <li><span class="me"><i class="fa-solid fa-envelope"></i></span> : <a href="mailto:liamgen.js@proton.me">liamgen.js@proton.me</a></li>
-                        <li><span class="me"><i class="fa-brands fa-discord"></i></span> : <code>liamgen.js#1315</code></li>
-                        <li><span class="me"><i class="fa-brands fa-instagram"></i></span> : <a href="https://www.instagram.com/liamgen.js.web/" target="_blank">liamgenjs</a></li>
-                    </ul>
-                </h4>
-            </div>
+            <header>
+                <img src="cdn/img/banner.png" alt="">
+                <i class="open-menu mobile fa-solid fa-bars"></i>
+                <ul>
+                    <li href="#about">A propos</li>
+                    <li href="#services">Mes services</li>
+                    <li href="#projects">Mes projets</li>
+                    <li href="#contact">Me contacter</li>
+                </ul>
+            </header>
+            <article>
+                <div class="header">
+                    <div class="me glass animate__animated animate__backInLeft" id="about">
+                        <div class="align">
+                            <img src="cdn/img/logo.png" alt="">
+                            <h1>A propos de moi</h1>
+                        </div>
+        
+                        <div>
+                            <p>
+                                Hey, moi c'est <span class="lgjs-font lgjs-color lgjs-text">liamgen.js</span> et je suis développeur depuis 3 ans !
+                            </p>
             
+                            <p>
+                                Je développe des <span class="lgjs-color lgjs-text">sites web</span>,
+                                <br>
+                                des <span class="lgjs-color lgjs-text">applications</span> pour pc et bientôt des <span class="lgjs-color lgjs-text">applications mobiles</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <div class="services" id="services">
+                    <h1>
+                        <span class="lgjs-font">
+                            Mes
+                            <span class="lgjs-color">
+                                services
+                            </span>
+                        </span>
+                    </h1>
+                    <div class="container">
+                        <div>
+                            <h2>Site vitrine</h2>
+                            <p>
+                                Site web simple sans interactions avec le client pour vous ou votre entreprise.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Site dynamique</h2>
+                            <p>
+                                Site web avec une base de données et des interactions pour vous ou votre entreprise.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Application PC</h2>
+                            <p>
+                                Application pour le système Windows
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Extension Web</h2>
+                            <p>
+                                Extension pour tous les navigateurs chromiums (Chrome, Opera, Vivaldi)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="projects" id="projects">
+                    <h1><span class="lgjs-font">
+                        Mes
+                        <span class="lgjs-color lgjs-text">
+                            projets
+                        </span>
+                    </span></h1>
+                    <div class="container">
+                        <div href="https://levendelaiscinema.fr" target="_blank">
+                            <span>
+                                <h2>Cinéma Le Vendelais</h2>
+                                <img src="cdn/img/projet-1.png" alt="">
+                            </span>
+                            
+    
+                            <p>Le site web du cinéma Le Vendelais</p>
+                        </div>
+                        <div href="https://github.com/liam-gen/better-websites" target="_blank">
+                            <h2>Better Websites</h2>
+                            <p>
+                                Une extension qui améliore l'affichage de vos sites favoris !
+                            </p>
+                        </div>
+                        <div href="https://github.com/liam-gen/ilisten" target="_blank">
+                            <span>
+                                <h2>iListen</h2>
+                                <img src="cdn/img/ilisten.png" alt="">
+                            </span>
+                            
+                            <p>
+                                L'application de musique gratuite !
+                            </p>
+                        </div>
+                        <div href="https://github.com/liam-gen/snot-social" target="_blank">
+                            <span>
+                                <h2>Better SNOT</h2>
+                                <img src="cdn/img/better-snot.png" alt="">
+                            </span>
+                            
+    
+                            <p>
+                                L'application PC qui améliore votre experience sur le réseau social <a href="https://snot.fr/fr/?ref=lgjs_portfolio&utm_src=link" target="_blank">snot.fr</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="contact" id="contact">
+                    <h1>
+                        <span class="lgjs-font">
+                            Me
+                            <span class="lgjs-color">
+                                contacter
+                            </span>
+                        </span>
+                    </h1>
+                    <div class="container">
+                        <div href="mailto:liamgen.js@proton.me">
+                            <h2>
+                                <i class="fa-regular fa-envelope"></i>
+                                Email
+                            </h2>
+                            <p>
+                                liamgen.js@proton.me
+                            </p>
+                        </div>
+                        <div href="https://github.com/liam-gen" target="_blank">
+                            <h2><i class="fa-brands fa-github"></i> GitHub</h2>
+                            <p>
+                                liam-gen
+                            </p>
+                        </div>
+                        <div>
+                            <h2><i class="fa-brands fa-discord"></i> Discord</h2>
+                            <p>
+                                liamgen.js
+                            </p>
+                        </div>
+                        <div href="https://www.instagram.com/liamgen.js.web/" target="_blank">
+                            <h2><i class="fa-brands fa-instagram"></i> Instagram</h2>
+                            <p>
+                                @liamgen.js.web
+                            </p>
+                        </div>
+                        <div href="https://twitter.com/liamgenjs" target="_blank">
+                            <h2><i class="fa-brands fa-x-twitter"></i> Twitter</h2>
+                            <p>
+                                @liamgenjs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+    
+            </article>
         </main>
-
         <footer>
-            2023 &copy; Made with <i class="fa-solid fa-heart fa-beat" style=" --fa-animation-iteration-count: 5;color: var(--accent-color)"></i> by liamgen.js
+            <span class="lgjs-font">
+                2023 &copy; Made with <i class="lgjs-color fa-solid fa-heart fa-beat" style=" --fa-animation-iteration-count: 5;"></i> by
+            </span>
+            <img src="cdn/img/banner.png" width="100px" alt="liamgen.js">
         </footer>
     </div>
-    
+
+    <script src="cdn/js/main.js"></script>
     <script src="cdn/js/loader.js"></script>
-    <script src="cdn/js/script.js"></script>
 </body>
 </html>
