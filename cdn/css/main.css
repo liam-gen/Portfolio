@@ -5,7 +5,7 @@
     font-family: 'Azonix Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Azonix Regular'), url('https://liamgenjs.vercel.app/cdn/fonts/Azonix.woff') format('woff');
+    src: local('Azonix Regular'), url('cdn/fonts/Azonix.woff') format('woff');
 }
 
 /* DEFAULT */
@@ -192,8 +192,6 @@ article .projects .container{
 article .projects .container div{
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 
     min-height: 150px;
