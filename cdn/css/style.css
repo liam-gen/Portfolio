@@ -1,129 +1,3 @@
-
-@font-face {
-    font-family: 'Azonix Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Azonix Regular'), url('../fonts/Azonix.woff') format('woff');
-}
-
-:root{
-    --background-color: black;
-    --accent-color: #0583F2;
-    --text-color: white;
-    --title-font: "Azonix Regular";
-    --font: system-ui;
-}
-
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-body{
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font);
-}
-
-h1, h2, h3{
-    font-family: var(--title-font);
-}
-
-header{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-around;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: black;
-}
-
-header .menu{
-    display: flex;
-    list-style: none;
-    gap: 50px;
-}
-
-header .menu a{
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-header .menu a:hover{
-    color: lightslategray;
-}
-
-main{
-    margin: 10%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-span.me{
-    color: var(--accent-color);
-    font-family: var(--title-font);
-}
-
-.elements{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px
-}
-
-.elements div{
-    background: white;
-    border-radius: 1.2rem;
-    color: black;
-    padding: 5px;
-    cursor: pointer;
-    transition: all .3s ease-in;
-    max-width: 255px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align:center;
-}
-
-.elements div:hover{
-    padding: 10px;
-}
-
-.elements div img{
-    height: 100px;
-}
-
-footer{
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-@media screen and (max-width: 780px) {
-    header{
-        flex-direction: column;
-        position: unset !important;
-    }
-
-    header ul{
-        display: none !important;
-    }
-
-    main *{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -142,25 +16,25 @@ footer{
 
 /* LOADER */
 
-
- .container{
+.content{
     display: none;
- }
+}
 
- .loader{
+.loader{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
- }
+}
  
- .loader img {
+.loader img {
     width: 100px;
     animation: spin 2s infinite;
- }
+}
 
-  @keyframes spin {
+@keyframes spin {
     from {
         transform:rotate(0deg);
     }
