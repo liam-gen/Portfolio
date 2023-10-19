@@ -128,9 +128,8 @@ article .me img{
 }
 
 .lgjs-text{
-    text-shadow: .1px 0 skyblue, -0.1px 0 skyblue, 0 .1px skyblue, 0 -0.1px skyblue,
-               1px 1px skyblue, -1px -1px skyblue, 1px -1px skyblue, -1px 1px skyblue;
-               font-weight: bold;
+        text-shadow: 0 -0.1px 20px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+        font-weight: bold;
 }
 
 /* SERVICES */
