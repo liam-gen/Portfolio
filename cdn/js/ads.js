@@ -1,7 +1,7 @@
 class LGJSAds extends HTMLElement {
     constructor() {
       super();
-      this.ads = this.httpGet("https://liamgenjs.vercel.app/cdn/ads/ads.json")
+      this.ads = JSON.parse(this.httpGet("https://liamgenjs.vercel.app/cdn/ads/ads.json"))
       this.launchAds()
     }
 
@@ -14,10 +14,18 @@ class LGJSAds extends HTMLElement {
     }
 
     launchAds(){
-        let id = Math.floor(Math.random() * this.ads.length)
-        console.log(id)
-        console.log(this.ads[id])
+        let list = this.shuffleArray(this.ads)
+        console.log(list)
     }
+
+    shuffleArray(array){
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+      }
 }
 
 customElements.define("lgjs-ad", LGJSAds);
