@@ -10,6 +10,12 @@ class LGJSAds extends HTMLElement {
         this.setAd(0)
     }
 
+    setStyle(){
+        this.style.width = "600px";
+        this.style.height = "150px";
+        this.style.borderRadius = "8px";
+    }
+
     httpGet(theUrl)
     {
         var xmlHttp = new XMLHttpRequest();
@@ -25,6 +31,10 @@ class LGJSAds extends HTMLElement {
         this.innerHTML = `<a href="${ad["url"]}?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign=${ad["name"]}" target="_blank"><img src="${ad["path"]}" title="Cliquez ici !"></a>`
 
         setTimeout(() => {
+            if(index == this.listAds.length - 1){
+                this.listAds = this.shuffleArray(this.ads)
+                return this.setAd(0)
+            }
             this.setAd(index + 1)
         }, 10000)
     }
