@@ -26,9 +26,7 @@ class LGJSAds extends HTMLElement {
 
     setAd(index){
         let ad = this.listAds[index];
-        console.log(ad)
-
-        this.innerHTML = `<a href="${ad["url"]}?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign=${ad["name"]}" target="_blank"><img src="${ad["path"]}" title="Cliquez ici !"></a>`
+        this.innerHTML = `<a href="${ad["url"]}?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign=${ad["name"]}" target="_blank"><img onerror="this.src='https://liamgenjs.vercel.app/cdn/ads/loader.svg'" src="${ad["path"]}" title="Cliquez ici !"></a>`
 
         setTimeout(() => {
             if(index == this.listAds.length - 1){
