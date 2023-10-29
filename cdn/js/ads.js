@@ -1,4 +1,4 @@
-class LGJSAds extends HTMLImageElement {
+class LGJSAds extends HTMLElement {
     constructor() {
       super();
       this.ads = JSON.parse(this.httpGet("https://liamgenjs.vercel.app/cdn/ads/ads.json"))
@@ -30,9 +30,7 @@ class LGJSAds extends HTMLImageElement {
             window.open(ad["url"]+"?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign="+ad["name"])
         }
 
-        this.src = ad["path"]
-
-        //this.innerHTML = `<img src="${ad["path"]}" title="Cliquez ici !">`
+        this.innerHTML = `<img src="${ad["path"]}" title="Cliquez ici !">`
     }
 
     shuffleArray(array){
