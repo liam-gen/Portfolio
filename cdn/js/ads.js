@@ -6,7 +6,8 @@ class LGJSAds extends HTMLElement {
 
     connectedCallback() {
         this.ads = JSON.parse(this.httpGet("https://liamgenjs.vercel.app/cdn/ads/ads.json"))
-        this.launchAds()
+        this.listAds = this.shuffleArray(this.ads)
+        this.setAd(0)
     }
 
     httpGet(theUrl)
@@ -17,24 +18,15 @@ class LGJSAds extends HTMLElement {
         return xmlHttp.responseText;
     }
 
-    launchAds(){
-        let list = this.shuffleArray(this.ads)
-        this.setAd(this.ads[this.ads.length - 1])
-        for (const ad of list) {
-            setTimeout(() => {
-                this.setAd(ad)
-            }, 10000)
-        }
-    }
-
-    setAd(ad){
+    setAd(index){
+        let ad = this.listAds[index];
         console.log(ad)
 
-        this.onclick = function(){
-            window.open(ad["url"]+"?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign="+ad["name"])
-        }
+        this.innerHTML = `<a href="${ad["url"]}?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign=${ad["name"]}" target="_blank"><img src="${ad["path"]}" title="Cliquez ici !"></a>`
 
-        this.innerHTML = `<img src="${ad["path"]}" title="Cliquez ici !">`
+        setTimeout(() => {
+            this.setAd(index + 1)
+        }, 10000)
     }
 
     shuffleArray(array){
