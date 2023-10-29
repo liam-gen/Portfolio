@@ -14,6 +14,8 @@ class LGJSAds extends HTMLElement {
     }
 
     launchAds(){
+        console.log(this.ads)
+        console.log(typeof this.ads)
         let list = this.shuffleArray(this.ads)
         console.log(list)
     }
