@@ -1,8 +1,12 @@
 class LGJSAds extends HTMLElement {
     constructor() {
       super();
-      this.ads = JSON.parse(this.httpGet("https://liamgenjs.vercel.app/cdn/ads/ads.json"))
-      this.launchAds()
+      
+    }
+
+    connectedCallback() {
+        this.ads = JSON.parse(this.httpGet("https://liamgenjs.vercel.app/cdn/ads/ads.json"))
+        this.launchAds()
     }
 
     httpGet(theUrl)
