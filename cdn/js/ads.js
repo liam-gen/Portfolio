@@ -24,6 +24,8 @@ class LGJSAds extends HTMLElement {
     }
 
     setAd(ad){
+        console.log(ad)
+        
         this.onclick = function(){
             window.open(ad["url"]+"?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign="+ad["name"])
         }
