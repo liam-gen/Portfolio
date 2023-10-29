@@ -14,7 +14,7 @@ class LGJSAds extends HTMLElement {
     }
 
     launchAds(){
-        let id = Math.floor(Math.random() * this.ads)
+        let id = Math.floor(Math.random() * this.ads.length)
         console.log(id)
         console.log(this.ads[id])
     }
