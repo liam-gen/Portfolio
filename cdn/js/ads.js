@@ -30,7 +30,7 @@ class LGJSAds extends HTMLElement {
             window.open(ad["url"]+"?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign="+ad["name"])
         }
 
-        this.innerHTML = `<img src="${ad["path"]}" title="Cliquez ici !">`
+        //this.innerHTML = `<img src="${ad["path"]}" title="Cliquez ici !">`
     }
 
     shuffleArray(array){
