@@ -29,6 +29,10 @@ class LGJSAds extends HTMLElement {
         this.innerHTML = `<a href="${ad["url"]}?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign=${ad["name"]}" target="_blank"><img onerror="this.src='https://liamgenjs.vercel.app/cdn/ads/loader.svg'" src="${ad["path"]}" title="Cliquez ici !"></a>`
 
         if(this.getAttribute("source") && this.getAttribute("source").toLowerCase() == ad["name"].toLowerCase()){
+            if(index == this.listAds.length - 1){
+                this.listAds = this.shuffleArray(this.ads)
+                return this.setAd(0)
+            }
             return this.setAd(index + 1)
         }
 
