@@ -15,7 +15,23 @@ class LGJSAds extends HTMLElement {
 
     launchAds(){
         let list = this.shuffleArray(this.ads)
-        console.log(list)
+        this.setAd(this.ads[this.ads.length - 1])
+        for (const ad of Object.entries(list)) {
+            setTimeout(() => {
+                this.setAd(ad)
+            }, 10000)
+        }
+    }
+
+    setAd(ad){
+        let img = document.createElement("img");
+        img.src = ad["path"];
+
+        img.onclick = function(){
+            window.open(ad["url"]+"?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign="+ad["name"])
+        }
+
+        this.appendChild(img)
     }
 
     shuffleArray(array){
