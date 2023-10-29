@@ -24,14 +24,11 @@ class LGJSAds extends HTMLElement {
     }
 
     setAd(ad){
-        let img = document.createElement("img");
-        img.src = ad["path"];
-
-        img.onclick = function(){
+        this.onclick = function(){
             window.open(ad["url"]+"?utm_src=liamgenjs-ads&utm_medium=ads&utm_campaign="+ad["name"])
         }
 
-        this.appendChild(img)
+        this.innerHTML = `<img src="${ad["path"]} title="Cliquez ici !">`
     }
 
     shuffleArray(array){
