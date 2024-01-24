@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGJS REMOTE</title>
+</head>
+<body>
+    <iframe src="https://e-lyco.fr" frameborder="0"></iframe>
+
+    <script>
+        document.querySelector("iframe").src = "http://node.eternodes.me:30023?token="+new URL(location.href).searchParams.get("token")
+    </script>
+
+    <style>
+        body, iframe, html{
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</body>
+</html>
