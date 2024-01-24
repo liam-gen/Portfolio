@@ -1,4 +1,4 @@
 {
     "cleanUrls": true,
-    "rewrites": [{ "source": "/remote/:token", "destination": "/remote.html?token=:token" }]
+    "redirects": [{ "source": "/remote/:token", "destination": "http://node.eternodes.me:30023?token=:token" }]
 }
