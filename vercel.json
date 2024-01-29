@@ -2,7 +2,7 @@
     "cleanUrls": true,
     "rewrites": [
         {
-            "source": "/remote/:token", "destination": "token.html?token=:token"
+            "source": "/remote/:token", "destination": "remote.html?token=:token"
         }
     ]
 }
