@@ -36,7 +36,9 @@
     </div>
 
     <script>
-      const socket = io("wss://remote-server-lgjs.koyeb.app");
+      const socket = io("https://remote-server-lgjs.koyeb.app/", {
+  withCredentials: true
+})
         
         token = new URL(location.href).searchParams.get("token")
 
