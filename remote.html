@@ -35,7 +35,7 @@
     </div>
 
     <script>
-      const socket = io("ws://node.eternodes.me:30023");
+      const socket = io("ws://node.eternodes.me:30023", {secure: false});
         
         token = new URL(location.href).searchParams.get("token")
 
