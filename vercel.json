@@ -3,7 +3,7 @@
     "rewrites": [
         {
             "source": "/remote/:token",
-            "destination": "/remote.html?token=:token"
+            "destination": "/rmt.html?token=:token"
           }
     ]
 }
