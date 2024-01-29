@@ -4,6 +4,10 @@
         {
             "source": "/remote/:token",
             "destination": "/rmt.html?token=:token"
-          }
+        },
+        {
+        "source": "/remote/:token*",
+        "destination": "/rmt.html?token=:token"
+        }
     ]
 }
