@@ -24,8 +24,19 @@
   </style>
 
   <script>
+    function httpGet(theUrl)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false );
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+
     document.addEventListener("DOMContentLoaded", function(){
-      document.querySelector("iframe").src = "https://remote-server-lgjs.koyeb.app?token="+new URL(location.href).searchParams.get("token")
+      var parts = location.href.split('/');
+      var token = parts[parts.length - 1];
+
+      document.querySelector("iframe").src = "https://remote-server-lgjs.koyeb.app?token="+token
     })
   </script>
 </body>
