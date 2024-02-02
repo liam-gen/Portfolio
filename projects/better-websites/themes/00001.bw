@@ -1,0 +1,21 @@
+<<
+Name: Nom de l'extension
+Matches: ["liamgenjs.vercel.app"]
+Version: 1.0.0
+GitHub: myawesome/github
+>>
+
+// Modification de toutes les pages de exeample.com et de ses sous domaines
+STARTCSS
+body{
+    background: red;
+}
+ENDCSS
+
+
+// Bloc JavaScript
+STARTJS
+// Ajouter la classe "test" à un element avec son xpath
+sethtml ".header h1" YOOO
+
+ENDJS
