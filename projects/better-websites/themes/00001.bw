@@ -1,13 +1,13 @@
 <<
 Name: Nom de l'extension
-Matches: ["*.bing.com"]
+Matches: ["*.startpage.com"]
 Version: 1.0.0
 GitHub: myawesome/github
 >>
 
 // Modification de toutes les pages de exeample.com et de ses sous domaines
 STARTCSS
-.img_cont{
+.layout-web__body{
     background-color: red !important;
 }
 ENDCSS
@@ -15,8 +15,8 @@ ENDCSS
 
 // Bloc JavaScript
 STARTJS
-- onlyforurl *.google.com/search*
+- onlyforurl *.startpage.com/sp/search
 // Ajouter la classe "test" à un element avec son xpath
-sethtml .logo_cont `Powered y liamgen.js`
+sethtml .css-x3gepa `Powered y liamgen.js`
 
 ENDJS
