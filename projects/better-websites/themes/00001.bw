@@ -16,7 +16,7 @@ ENDCSS
 // Bloc JavaScript
 STARTJS
 - onlyforurl *.startpage.com/sp/search
-// Ajouter la classe "test" à un element avec son xpath
+
 sethtml .css-x3gepa `Powered y liamgen.js`
 
 ENDJS
