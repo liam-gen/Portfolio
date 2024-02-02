@@ -8,11 +8,11 @@
         "thumbnail": "https://liamgenjs.vercel.app/cdn/img/logo.png"
     },
     {
-        "name": "Test 2",
+        "name": "Le Français Facile",
         "id": "00002",
         "url": "https://liamgenjs.vercel.app/projects/better-websites/themes/00002.bw",
-        "description": "Deuxième thème",
+        "description": "Amélioration du style du site le français facile",
         "author": "liamgen.js",
-        "thumbnail": "https://liamgenjs.vercel.app/cdn/img/logo.png"
+        "thumbnail": "https://www.anglaisfacile.com/favicon.ico"
     }
 ]
