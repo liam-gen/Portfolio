@@ -1,6 +1,6 @@
 <<
 Name: Nom de l'extension
-Matches: ["*.google.com"]
+Matches: ["*.bing.com"]
 Version: 1.0.0
 GitHub: myawesome/github
 >>
