@@ -6,8 +6,14 @@
             "destination": "/rmt?token=:token"
         },
         {
-        "source": "/remote/:token*",
-        "destination": "/rmt?token=:token"
+            "source": "/remote/:token*",
+            "destination": "/rmt?token=:token"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "projects/better-websites/docs",
+            "destination": "https://liamgen-jss.gitbook.io/better-websites"
         }
     ]
 }
