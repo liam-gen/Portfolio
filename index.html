@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="cdn/css/me.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.21.0/core.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBMFC1GKCL"></script>
     <script>
@@ -19,12 +21,6 @@
     </script>
 </head>
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M54SGB7S" height="0" width="0" style="display:none;visibility:hidden">
-        </iframe>
-    </noscript>
 
     <p class="copyrights">
         2024 &copy; liamgen.js - Image <a href="https://jrozalski.com/" target="_blank">Jakub Różalski</a>
@@ -45,14 +41,118 @@
         <div class="snowflake snowflake2"></div>
     </div>
 
+    <div class="sounds">
+        <div class="song-data">
+            <div>Joue actuellement : Cantina Band</div>
+        </div>
+        <i id="play-sound" class="fa-solid fa-volume-xmark fa-2xl"></i>
+    </div>
+    
+
+    <style>
+        .sounds{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+            color: white;
+
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .song-data {
+            display: none;
+            max-width: 30em;
+            overflow: hidden;
+        }
+
+
+        .song-data div {
+            display: inline-block;
+            padding-right: 2em;
+            padding-left: 100%;
+            white-space: nowrap;
+            animation: defilement-rtl 15s infinite linear;
+        }
+
+        @keyframes defilement-rtl {
+            0% {
+                transform: translate3d(0,0,0);
+            }
+            100% {
+                transform: translate3d(-100%,0,0);
+            }
+        }
+    </style>
+
+    <script>
+        var sounds = [
+            {
+                "name": "Peace and Purpose",
+                "time": 20,
+                "author": "John Williams"
+            },
+            {
+                "name": "Cantina Band",
+                "time": 0,
+                "author": "John Williams"
+            }
+        ]
+        var index = Math.floor(Math.random() * sounds.length);
+        console.log(index)
+
+        var audioData = sounds[index]
+        var audio = new Audio(`cdn/sounds/background-${index}.mp3`);
+
+        var playSound = document.getElementById("play-sound");
+        var sondData = document.querySelector(".song-data div")
+
+        let isPlaying = false;
+
+        audio.currentTime = audioData["time"];
+        
+        audio.volume = 0.5;
+
+
+        playSound.addEventListener("click", () => {
+            if(isPlaying)
+            {
+                sondData.parentElement.style.display = "none"
+
+                audio.pause();
+                playSound.classList.add("fa-volume-xmark")
+                playSound.classList.remove("fa-music")
+
+                isPlaying = false;
+                
+            }
+            else
+            {
+                sondData.parentElement.style.display = "block"
+                sondData.innerHTML = "Joue actuellement <b>"+audioData["name"] + "</b> de <u>" + audioData["author"] + "</u>"
+
+                playSound.classList.add("fa-music")
+                playSound.classList.remove("fa-volume-xmark")
+                audio.play();
+
+                isPlaying = true;
+            }
+        })
+    </script>
+
     <div class="container">
         <div class="me">
             <div class="profil">
                 <img src="cdn/img/logo.png" alt="liamgen.js avatar">
-                <h1>liamgen.js</h1>
+                <span>
+                    <h2>liamgen.js</h2>
+                    <p id="typewritter">Développeur web & apps</p>
+                </span>
             </div>
             
-            <p>Développeur web & apps</p>
+            
 
             <img class="langages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=liam-gen&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" alt="">
 
@@ -75,5 +175,23 @@
             </div>
         </div>
     </div>
+
+    <script>
+        var app = document.getElementById('typewritter');
+
+        var typewriter = new Typewriter(app, {
+            loop: true
+        });
+
+        typewriter.typeString('Développeur web')
+            .pauseFor(2500)
+            .deleteChars(3)
+            .typeString("d'applications")
+            .pauseFor(2500)
+            .deleteChars(14)
+            .typeString('<u>depuis 3 ans</u>')
+            .pauseFor(2500)
+            .start();
+    </script>
 </body>
 </html>
