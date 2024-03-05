@@ -261,19 +261,15 @@ html, body{
 
 @media (max-width: 1000px) {
     .copyrights{
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 999;
-        position: absolute;
+        display: none;
     }
 
     .me{
         position: relative;
+        margin: 10px;
     }
 
     .container{
         position: relative;
-        margin: 10px;
     }
 }
