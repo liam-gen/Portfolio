@@ -6,6 +6,8 @@
     <title>liamgen.js</title>
     <link rel="shortcut icon" href="cdn/img/logo.png" type="image/x-icon">
 
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+
     <meta name="title" content="liamgen.js">
     <meta name="description" content="Tous mes services et mes créations sont disponibles ici !">
     <meta name="keywords" content="liamgenjs, liamgen.js, liamgen, liam, js, web, developpeur, liamgendotjs, liam-gen, liam-genjs, liam-gen-js, liamgen vercel, liamgenjs vercel, liamgen.js vercel, lgdotjs, liam, liam c">
@@ -156,6 +158,12 @@
                 isPlaying = true;
             }
         })
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+        new cursoreffects.fairyDustCursor({
+            colors: ["#ffffff"]
+        })
+    })
     </script>
 
     <div class="container">
