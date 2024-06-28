@@ -15,10 +15,5 @@
             "source": "/projects/better-websites/docs",
             "destination": "https://liamgen-jss.gitbook.io/better-websites"
         }
-    ],
-    "functions": {
-        "api/*.php": {
-            "runtime": "vercel-php@0.7.1"
-        }
-  }
+    ]
 }
