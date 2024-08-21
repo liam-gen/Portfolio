@@ -8,6 +8,10 @@
         {
             "source": "/remote/:token*",
             "destination": "/rmt?token=:token"
+        },
+        {
+            "source": "/uqload/:video*",
+            "destination": "/proxy/uqload.html?videoId=:video"
         }
     ],
     "redirects": [
