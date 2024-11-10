@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="cdn/img/logo.png" type="image/x-icon">
 
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-
+    
     <meta name="title" content="liamgen.js">
     <meta name="description" content="Tous mes services et mes créations sont disponibles ici !">
     <meta name="keywords" content="liamgenjs, liamgen.js, liamgen, liam, js, web, developpeur, liamgendotjs, liam-gen, liam-genjs, liam-gen-js, liamgen vercel, liamgenjs vercel, liamgen.js vercel, lgdotjs, liam, liam c">
@@ -108,10 +108,10 @@
     <script>
         var sounds = [
             {
-                "name": "Peace and Purpose",
-                "time": 20,
-                "author": "John Williams"
-            },
+            name: "Zigeunerweisen Op.20",
+            time: 0,
+            author: "Itzhak Perlman - Pablo de Sarasate",
+           },
             {
                 "name": "Cantina Band",
                 "time": 0,
@@ -121,7 +121,18 @@
                 "name": "Across the Stars",
                 "time": 13,
                 "author": "John Williams"
+            },
+            {
+                "name": "Carmen Habanera",
+                "time": 0,
+                "author": "G. Bizet"
+            },
+            {
+                "name": "Ride of the Valkyries",
+                "time": 0,
+                "author": "Richard Wagner"
             }
+           
         ]
         var index = Math.floor(Math.random() * sounds.length);
         console.log(index)
@@ -138,6 +149,18 @@
         
         audio.volume = 0.5;
 
+        audio.addEventListener("ended", () => {
+            if(index <sounds.length)
+            {
+                index++
+                sondData.innerHTML = "Joue actuellement <b>"+sounds[index]["name"] + "</b> de <u>" + sounds[index]["author"] + "</u>"
+                audio.src = `cdn/sounds/background-${index}.mp3`;
+                audio.time = 0;
+                audio.play()
+            }
+            
+        })
+
 
         playSound.addEventListener("click", () => {
             if(isPlaying)
@@ -149,6 +172,7 @@
                 playSound.classList.remove("fa-music")
 
                 isPlaying = false;
+                document.querySelector(".now.playing").style.display = "none"
                 
             }
             else
@@ -161,6 +185,7 @@
                 audio.play();
 
                 isPlaying = true;
+                document.querySelector(".now.playing").style.display = "block"
             }
         })
 
@@ -204,7 +229,23 @@
                 </a>
             </div>
         </div>
+
+
     </div>
+
+
+    <div class="now playing" id="music">
+        <span class="bar n1">A</span>
+        <span class="bar n2">B</span>
+        <span class="bar n3">c</span>
+        <span class="bar n4">D</span>
+        <span class="bar n5">E</span>
+        <span class="bar n6">F</span>
+        <span class="bar n7">G</span>
+        <span class="bar n8">H</span>
+      </div>
+
+
 
 
     <script>
