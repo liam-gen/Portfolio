@@ -7,8 +7,8 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./tailwind.css -o ./cdn/css/tailwind.css --watch",
-    "build": "npx tailwindcss -i ./tailwind.css -o ./cdn/css/tailwind.css --minify"
+    "css:dev": "npx tailwindcss -i ./tailwind.css -o ./cdn/css/tailwind.css --watch",
+    "css:build": "npx tailwindcss -i ./tailwind.css -o ./cdn/css/tailwind.css --minify"
   },
   "keywords": [],
   "author": "",
