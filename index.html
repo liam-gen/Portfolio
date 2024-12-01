@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>liamgen.js</title>
-    <link rel="shortcut icon" href="cdn/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="cdn/css/tailwind.css">
+    <link rel="shortcut icon" href="https://liamgenjs.vercel.app/cdn/img/logo.png">
 
-    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-    
+    <!-- SEO -->
+
     <meta name="title" content="liamgen.js">
     <meta name="description" content="Tous mes services et mes créations sont disponibles ici !">
-    <meta name="keywords" content="liamgenjs, liamgen.js, liamgen, liam, js, web, developpeur, liamgendotjs, liam-gen, liam-genjs, liam-gen-js, liamgen vercel, liamgenjs vercel, liamgen.js vercel, lgdotjs, liam, liam c">
+    <meta name="keywords" content="liamgenjs, liamgen.js, liamgen, liam, js, web, developpeur, liamgendotjs, liam-gen, liam-genjs, liam-gen-js, liamgen vercel, liamgenjs vercel, liamgen.js vercel, lgdotjs, liam, liam c, liam charpentier">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="French">
@@ -23,11 +24,6 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://liamgenjs.vercel.app/cdn/img/logo.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="cdn/css/me.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.21.0/core.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBMFC1GKCL"></script>
     <script>
@@ -38,232 +34,181 @@
         gtag('config', 'G-EBMFC1GKCL');
     </script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-10">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold">Liam <span class="text-blue-600">Charpentier</span></h1>
+                <ul class="flex space-x-4">
+                    <li><a href="#accueil" class="hover:text-blue-600">Accueil</a></li>
+                    <li><a href="#competences" class="hover:text-blue-600">Compétences</a></li>
+                    <li><a href="#projets" class="hover:text-blue-600">Projets</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <p class="copyrights">
-        2024 &copy; liamgen.js - Image <a href="https://jrozalski.com/" target="_blank">Jakub Różalski</a>
-    </p>
+    <main class="container mx-auto px-6 pt-24">
+        <section id="accueil" class="py-20">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold mb-4">Liam <span class="text-blue-600">Charpentier</span></h2>
+                <p class="text-xl mb-8">Développeur web <span class="text-blue-600">passionné</span></p>
+                <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Me contacter</a>
+            </div>
+        </section>
 
-    <div class="background"></div>
+        <section id="services" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Mes Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md relative">
+                    <h3 class="text-xl font-semibold mb-2">Site vitrine</h3>
+                    <p>Site web simple sans interactions avec le client pour vous ou votre entreprise.</p>
+                    <span class="-top-2 -end-4 absolute bg-green-800 text-green-100 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Le plus demandé</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Site dynamique</h3>
+                    <p>Site web avec une base de données et des interactions pour vous ou votre entreprise.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Application PC</h3>
+                    <p>Application pour le système Windows.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Extension Web</h3>
+                    <p>Extension pour tous les navigateurs chromiums (Chrome, Opera, Vivaldi).</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md relative md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-2">Application mobile</h3>
+                    <p>Je développerais une application mobile pour vous ou votre entreprise.</p>
+                    <span class="-top-2 -end-4 absolute bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Bientôt disponible</span>
+                </div>
+            </div>
+        </section>
 
-    <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake snowflake1"></div>
-        <div class="snowflake snowflake1"></div>
-        <div class="snowflake snowflake3"></div>
-        <div class="snowflake snowflake2"></div>
-        <div class="snowflake snowflake1"></div>
-        <div class="snowflake snowflake4"></div>
-        <div class="snowflake snowflake2"></div>
-        <div class="snowflake snowflake1"></div>
-        <div class="snowflake snowflake4"></div>
-        <div class="snowflake snowflake2"></div>
-    </div>
+        <section id="competences" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Mes compétences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Front-end</h3>
+                    <ul class="list-disc list-inside">
+                        <li>HTML5</li>
+                        <li>CSS3 / Tailwind CSS</li>
+                        <li>JavaScript</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Back-end</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Autres</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Git / GitHub</li>
+                        <li>Docker</li>
+                        <li>OVH</li>
+                        <li>Socket.io</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <div class="sounds">
-        <div class="song-data">
-            <div>Joue actuellement : Cantina Band</div>
-        </div>
-        <i id="play-sound" class="fa-solid fa-volume-xmark fa-2xl"></i>
-    </div>
-    
+        <section id="projets" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Mes projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
-    <style>
-        .sounds{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 999;
-            color: white;
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Le Vendelais</h3>
+                    <p class="mb-4">Développement d'un site web complet pour l'association du cinéma le Vendelais.</p>
+                    <p class="mb-2">
+                        <strong>Technologies :</strong>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-purple-400 text-purple-900 w-fit">PHP</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-cyan-400 text-cyan-900 w-fit">Tailwind CSS</span>
+                    </p>
+                    <p class="mb-2">
+                        <strong>Systèmes :</strong>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-yellow-400 text-yellow-900 w-fit">API</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-red-400 text-red-900 w-fit">Nextcloud</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-green-400 text-green-900 w-fit">Dashobard</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-orange-400 text-orange-900 w-fit">Newsletter</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-blue-400 text-blue-900 w-fit">OVH</span>
+                    </p>
+                    <a href="https://levendelaiscinema.fr?utm_src=lgjs-project" target="_blank" class="text-blue-600 hover:underline">Voir le projet</a>
+                </div>
 
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+                <div class="bg-white p-6 rounded-lg shadow-md relative">
+                    <h3 class="text-xl font-semibold mb-2">Yvan des pizz</h3>
+                    <p class="mb-4">Développement d'un site web vitrine pour le restaurant d'Yvan des pizz.</p>
+                    <p class="mb-2">
+                        <strong>Technologies :</strong>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-purple-400 text-purple-900 w-fit">PHP</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-cyan-400 text-cyan-900 w-fit">Tailwind CSS</span>
+                    </p>
+                    <p class="mb-2">
+                        <strong>Systèmes :</strong>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-yellow-400 text-yellow-900 w-fit">API</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-green-400 text-green-900 w-fit">Dashobard</span>
+                        <span class="rounded-md px-2 py-1 text-xs font-semibold bg-blue-400 text-blue-900 w-fit">OVH</span>
+                    </p>
+                    <a href="https://yvandespizz.fr?utm_src=lgjs-project" target="_blank" class="text-blue-600 hover:underline">Voir le projet</a>
 
-        .song-data {
-            display: none;
-            max-width: 30em;
-            overflow: hidden;
-        }
-
-
-        .song-data div {
-            display: inline-block;
-            padding-right: 2em;
-            padding-left: 100%;
-            white-space: nowrap;
-            animation: defilement-rtl 15s infinite linear;
-        }
-
-        @keyframes defilement-rtl {
-            0% {
-                transform: translate3d(0,0,0);
-            }
-            100% {
-                transform: translate3d(-100%,0,0);
-            }
-        }
-    </style>
-
-    <script>
-        var sounds = [
-            {
-            name: "Zigeunerweisen Op.20",
-            time: 0,
-            author: "Itzhak Perlman - Pablo de Sarasate",
-           },
-            {
-                "name": "Cantina Band",
-                "time": 0,
-                "author": "John Williams"
-            },
-            {
-                "name": "Across the Stars",
-                "time": 13,
-                "author": "John Williams"
-            },
-            {
-                "name": "Carmen Habanera",
-                "time": 0,
-                "author": "G. Bizet"
-            },
-            {
-                "name": "Ride of the Valkyries",
-                "time": 0,
-                "author": "Richard Wagner"
-            }
-           
-        ]
-        var index = Math.floor(Math.random() * sounds.length);
-        console.log(index)
-
-        var audioData = sounds[index]
-        var audio = new Audio(`cdn/sounds/background-${index}.mp3`);
-
-        var playSound = document.getElementById("play-sound");
-        var sondData = document.querySelector(".song-data div")
-
-        let isPlaying = false;
-
-        audio.currentTime = audioData["time"];
-        
-        audio.volume = 0.5;
-
-        audio.addEventListener("ended", () => {
-            if(index <sounds.length)
-            {
-                index++
-                sondData.innerHTML = "Joue actuellement <b>"+sounds[index]["name"] + "</b> de <u>" + sounds[index]["author"] + "</u>"
-                audio.src = `cdn/sounds/background-${index}.mp3`;
-                audio.time = 0;
-                audio.play()
-            }
-            
-        })
-
-
-        playSound.addEventListener("click", () => {
-            if(isPlaying)
-            {
-                sondData.parentElement.style.display = "none"
-
-                audio.pause();
-                playSound.classList.add("fa-volume-xmark")
-                playSound.classList.remove("fa-music")
-
-                isPlaying = false;
-                document.querySelector(".now.playing").style.display = "none"
+                    <span class="-top-2 -end-4 absolute bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">Projet en cours...</span>
+                </div>
                 
-            }
-            else
-            {
-                sondData.parentElement.style.display = "block"
-                sondData.innerHTML = "Joue actuellement <b>"+audioData["name"] + "</b> de <u>" + audioData["author"] + "</u>"
-
-                playSound.classList.add("fa-music")
-                playSound.classList.remove("fa-volume-xmark")
-                audio.play();
-
-                isPlaying = true;
-                document.querySelector(".now.playing").style.display = "block"
-            }
-        })
-
-    window.addEventListener("DOMContentLoaded", (event) => {
-        new cursoreffects.fairyDustCursor({
-            colors: ["#ffffff"]
-        })
-       
-    })
-    </script>
-
-    <div class="container">
-        <div class="me">
-            <div class="profil">
-                <img src="cdn/img/logo.png" alt="liamgen.js avatar">
-                <span>
-                    <h2>liamgen.js</h2>
-                    <p id="typewritter">Développeur web & apps</p>
-                </span>
             </div>
-            
-            
+        </section>
 
-            <img class="langages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=liam-gen&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" alt="">
+        <section id="contact" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Me contacter</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <p class="mb-6">Pour toute demande de site internet ou pour toute question, vous pouvez m'envoyer un email à l'adresse suivante :</p>
+                <p class="text-xl font-semibold mb-6 text-center">liamgen.js@proton.me</p>
+                <p class="mb-6">Merci d'inclure les informations suivantes dans votre email :</p>
+                <ul class="list-disc list-inside mb-6">
+                    <li>Votre nom (et celui de votre entreprise)</li>
+                    <li>Une brève description de votre projet</li>
+                    <li>Vos délais et budget estimés</li>
+                    <li>Toute autre information pertinente pour le projet</li>
+                </ul>
+                <p>Je tenterais de vous répondre dans les 48 heures suivant la réception de votre email.</p>
+            </div>
+        </section>
 
-            <div class="social">
-                <a href="https://github.com/liam-gen" target="_blank">
-                    <i class="fa-brands fa-github"></i>
+        <section id="social-links" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Retrouvez-moi en ligne</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://codepen.io/liamgen-js" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-3 rounded-lg text-white font-semibold transition-transform hover:scale-105 bg-[#131417]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-codepen"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" x2="12" y1="22" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/><polyline points="2 15.5 12 8.5 22 15.5"/><line x1="12" x2="12" y1="2" y2="8.5"/></svg>
+                    CodePen
+                </a>
+                <a href="https://www.github.com/liam-gen" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-3 rounded-lg text-white font-semibold transition-transform hover:scale-105 bg-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    GitHub
+                </a>
+                <a href="https://www.instagram.com/liamgen.js.web" target="_blank" rel="noopener noreferrer" class="flex items-center px-6 py-3 rounded-lg text-white font-semibold transition-transform hover:scale-105 bg-gradient-to-r from-purple-500 to-pink-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    Instagram
                 </a>
             </div>
+        </section>
 
-            <div class="links">
-                <a href="./projects">
-                    <p class="text">Mes projets</p>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+        <section id="musique" class="py-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Ma sélection musicale</h2>
 
-                <a href="./services">
-                    <p class="text">Mes services</p>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
+            <iframe title="deezer-widget" src="https://widget.deezer.com/widget/light/playlist/13323162943" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Liam Charpentier. Tous droits réservés.</p>
         </div>
-
-
-    </div>
-
-
-    <div class="now playing" id="music">
-        <span class="bar n1">A</span>
-        <span class="bar n2">B</span>
-        <span class="bar n3">c</span>
-        <span class="bar n4">D</span>
-        <span class="bar n5">E</span>
-        <span class="bar n6">F</span>
-        <span class="bar n7">G</span>
-        <span class="bar n8">H</span>
-      </div>
-
-
-
-
-    <script>
-        var app = document.getElementById('typewritter');
-
-        var typewriter = new Typewriter(app, {
-            loop: true
-        });
-
-        typewriter.typeString('Développeur web')
-            .pauseFor(2500)
-            .deleteChars(3)
-            .typeString("d'applications")
-            .pauseFor(2500)
-            .deleteChars(14)
-            .typeString('<u>depuis 3 ans</u>')
-            .pauseFor(2500)
-            .start();
-    </script>
+    </footer>
 </body>
 </html>
