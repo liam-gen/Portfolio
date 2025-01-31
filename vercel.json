@@ -2,22 +2,20 @@
     "cleanUrls": true,
     "rewrites": [
         {
+            "source": "/*",
+            "destination": "https://liamcharpentier.fr"
+        },
+        {
+            "source": "/",
+            "destination": "https://liamcharpentier.fr"
+        },
+        {
             "source": "/remote/:token",
-            "destination": "/rmt?token=:token"
+            "destination": "https://remote.liamcharpentier.fr?token=:token"
         },
         {
             "source": "/remote/:token*",
-            "destination": "/rmt?token=:token"
-        },
-        {
-            "source": "/uqload/:video*",
-            "destination": "/proxy/uqload.html?videoId=:video"
-        }
-    ],
-    "redirects": [
-        {
-            "source": "/projects/better-websites/docs",
-            "destination": "https://liamgen-jss.gitbook.io/better-websites"
+            "destination": "https://remote.liamcharpentier.fr?token=:token"
         }
     ]
 }
