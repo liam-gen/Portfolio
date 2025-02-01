@@ -2,14 +2,6 @@
     "cleanUrls": true,
     "rewrites": [
         {
-            "source": "/*",
-            "destination": "https://liamcharpentier.fr"
-        },
-        {
-            "source": "/",
-            "destination": "https://liamcharpentier.fr"
-        },
-        {
             "source": "/remote/:token",
             "destination": "https://remote.liamcharpentier.fr?token=:token"
         },
