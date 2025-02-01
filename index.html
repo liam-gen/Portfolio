@@ -1,125 +1,75 @@
 <head>
-	<meta http-equiv="refresh" content="5; url='https://liamcharpentier.fr?utm_src=portfolio-vercel'" />
+    <meta http-equiv="refresh" content="5; url='https://liamcharpentier.fr?utm_src=portfolio-vercel'" />
 </head>
 
 <body>
 
     <style>
-        *,
-        *::before,
-        *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: inherit;
+        @keyframes progressbar {
+            0% {
+                transform: translateX(-75%);
+            }
+
+            100% {
+                transform: translateX(225%);
+            }
         }
 
-        html {
-        box-sizing: border-box;
-        }
-
-        body {
-        background: #263238;
-        font-family: "Nunito", sans-serif;
+        :root {
+            font-family: "DM Sans", sans-serif;
+            color: #0d1117;
         }
 
         .container {
-        margin: auto auto;
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        .tittle,
-        .subtitle {
-        margin-bottom: 40px;
-        color: #44b9ff;
-        letter-spacing: 4px;
-        text-transform: uppercase;
+        .loading {
+            width: 100%;
+            border-radius: 9999px;
+            height: 4px;
+            background: #f3f3f3;
+            overflow: hidden;
         }
 
-        .square-container {
-        list-style-type: none;
-        display: flex;
-        position: relative;
+        .loading__bar {
+            border-radius: 9999px;
+            height: 100%;
+            width: 40%;
+            transform-origin: center;
+            background: #0065d1;
+            animation: progressbar 1s ease-in-out alternate infinite;
         }
 
-        .square {
-        margin: 4px;
-        width: 30px;
-        height: 30px;
-        border-radius: 7px;
-        animation: rotating 2.5s ease infinite;
+        h1 {
+            font-size: 2rem;
+            line-height: 1.67;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
         }
 
-        .square1 {
-        background: #736efe;
-        animation-delay: 0.2s;
+        a {
+            color: #0057b4;
         }
 
-        .square2 {
-        background: #5999ff;
-        animation-delay: 0.4s;
-        }
-
-        .square3 {
-        background: #44b9ff;
-        animation-delay: 0.6s;
-        }
-
-        .square4 {
-        background: #31d8ff;
-        animation-delay: 0.8s;
-        }
-
-        .square5 {
-        background: #18ffff;
-        animation-delay: 1s;
-        }
-
-        @keyframes rotating {
-        0% {
-            transform: rotate(0) scale(1);
-        }
-        50% {
-            transform: rotate(90deg) scale(0.6);
-        }
-        100% {
-            transform: rotate(90deg) scale(1);
-        }
-        }
-        footer {
-        margin: auto auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
-        color: #31d8ff;
-        }
-
-        footer a {
-        color: #736efe;
+        body {
+            background-color: #fdfdfd;
         }
     </style>
-    
-	<section class="container">
-		<div class="tittle">
-			<h2>Redirection...</h2>
-		</div>
-		<div class="subtitle">
-			<h3>Ce site à été remplacé.</h3>
-		</div>
-		<div class="square-container">
-			<div class="square square1">&nbsp;</div>
-			<div class="square square2">&nbsp;</div>
-			<div class="square square3">&nbsp;</div>
-			<div class="square square4">&nbsp;</div>
-			<div class="square square5">&nbsp;</div>
-		</div>
-	</section>
-	<footer>
-		<h4>Vous allez êtres redirigés vers <a href="https://liamcharpentier.fr?utm_src=portfolio-vercel">https://liamcharpentier.fr</a> dans quelques instants.</h4>
-	</footer>
+
+    <div class="container">
+        <div>
+            <h1>
+                Redirection...
+            </h1>
+            <div class="loading">
+                <div class="loading__bar"></div>
+            </div>
+            <p>Veuillez patienter. Si vous n'êtes pas redirigés, veuillez , <a
+                    href="https://liamcharpentier.fr?utm_src=portfolio-vercel">cliquer ici</a>.</p>
+        </div>
+    </div>
 </body>
